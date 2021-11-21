@@ -43,23 +43,56 @@ function Header() {
         <Nav>
             <Menu src="/images/icons8-menu.svg"/>
             <Logo src="/images/logo.svg"/>hotstar
+            
              
             <>
                 <NavMenu>        
                     <NavLink to="/">
                         <span>TV</span>
+                        <ul>
+                                <li>HINDI</li>
+                                <li>BANGALI</li>
+                                <li>TELGU</li>
+                                <li>ENGLISH</li>
+                                <li>TAMIL</li>
+                                <li>MALYALAM</li>
+                                <li>KANARAD</li>
+                                <li>ENGLISH</li>
+                            </ul>
+
                     </NavLink>
                     <NavLink to="/">
                         <img src="/images/watchList-icon.svg" alt="" />
                         <span>Movies</span>
+                        <ul>
+                                <li>HINDI</li>
+                                <li>BANGALI</li>
+                                <li>TELGU</li>
+                                <li>ENGLISH</li>
+                                <li>TAMIL</li>
+                                <li>MALYALAM</li>
+                                <li>KANARAD</li>
+                                <li>ENGLISH</li>
+                            </ul>
                     </NavLink>
                     <NavLink to="/">
                         <img src="/images/original-icon.svg" alt="" />
                         <span>Sports</span>
+                        <ul>
+                                <li>HINDI</li>
+                                <li>BANGALI</li>
+                                <li>TELGU</li>
+                                <li>ENGLISH</li>
+                                <li>TAMIL</li>
+                                <li>MALYALAM</li>
+                                <li>KANARAD</li>
+                                <li>ENGLISH</li>
+                            </ul>
                     </NavLink>
                     <NavLink to="/">
                         <img src="/images/movie-icon.svg" alt="" />
                         <span>Disney+</span>
+                        
                     </NavLink>
                     <Logos src="https://www.hotstar.com/assets/4aa70ede8904e16b7630300c09219c8e.svg"/>
                 </NavMenu>
@@ -97,15 +130,13 @@ const Nav = styled.nav`
     display:flex;
     align-items:center;
     padding: 0 30px;
-    height: 80px;
+    height: auto;
     width:100%;
-    // border:1px solid red;
-    overflow: hidden;
     z-index:1;
+    overflow:visible;
     position:fixed;
-
     &:before{
-        background: linear-gradient(to bottom, #141b29, #0c111b 300px);
+        background: #040714;
         content:"";
         position: absolute;
         top:0;
@@ -128,14 +159,15 @@ const NavMenu = styled.div`
    display: flex;
    flex:1;
     margin-left: 25px;
-
    a{
         display:flex;
         align-items:center;
-        padding: 0 12px;
+        padding: 15px 15px;
         cursor:pointer;
         color:white;
         text-decoration:none;
+        z-index:1;
+        // border:1px solid red;
         
         img{
             height:20px;
@@ -146,37 +178,59 @@ const NavMenu = styled.div`
             color:#9EAFB0;
             font-weight:bolder;
             position:relative;
-            &:after{
-                content:"";
-                height:2px;
-                background: white;
-                position:absolute;
-                left:0;
-                right:0;
-                bottom:-6px;
-                opacity:0;
-                transform-origin: left center;
-                 transition : all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
-                transform: scaleX(0)
+            // &:after{
+            //     content:"";
+            //     height:2px;
+            //     background: white;
+            //     position:absolute;
+            //     left:0;
+            //     right:0;
+            //     bottom:-6px;
+            //     opacity:0;
+            //     transform-origin: left center;
+            //      transition : all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+            //     transform: scaleX(0)
+            // }
+        }
+        ul{
+            list-style:none;
+            position:absolute;
+            display:none;
+            margin-top: 390px;
+            background:#1c2940;
+            margin-left:-60px;
+            border-radius:4px;
+            transition:slideup 0.3s,hs-fadeIn 0.3s;
+                
+            li{
+                padding:10px;
+                margin:auto;
+                
             }
         }
-     &:hover{
-         span:after{
-             transform: scaleX(1);
-             opacity:1;
-         }
-        span:hover{ 
-            color:#C2D1D2;
+        &:hover{
+            span:after{
+                transform: scaleX(1);
+                opacity:1;
+            }
+            span:hover{ 
+                color:#C2D1D2;
+            }
+            ul{
+                display:block;
+                // -webkit-animation: slideup 0.3s,hs-fadeIn 0.3s;
+                // -o-animation: slideup 0.3s,hs-fadeIn 0.3s;
+                // animation: slideup 0.3s,hs-fadeIn 0.3s;
+            }
         }
-     }
-   }
-`
+    }
+    `
+    
 const UserImg = styled.img`
    width:48px;
    height:48px;
    border-radius:50%;
    cursor:pointer;
-
 `
 const LoginContainer = styled.div`
    display:flex;
@@ -198,7 +252,6 @@ const Logins = styled.div`
 const Logos = styled.img`
  margin-left:20px;
  cursor:pointer;
-
 `
 const Search = styled.div`
    border-bottom: 1px solid #1f80e0;
@@ -213,9 +266,7 @@ font-size:12px;
 background:transparent;
 `
 const SearchBarIcon = styled.img`
-
 width:18px;
-
 `
 
 const SubscriptionBtn = styled.button`
@@ -232,7 +283,6 @@ const SubscriptionBtn = styled.button`
    cursor:pointer;
    &:hover{
    background:  #1f80b9;
-
        border-color:transparent;
    }
-`
+   `

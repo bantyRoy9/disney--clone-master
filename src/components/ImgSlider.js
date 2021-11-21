@@ -98,6 +98,8 @@ export default ImgSlider
 
 const Carousel = styled(Slider)`
 
+margin-top:80px;
+
     ul li button{
          &:before{
              display:none;
@@ -125,12 +127,12 @@ const Carousel = styled(Slider)`
     }
 `
 const Containers = styled.div`
-padding:0px 8px;
+padding:0px 18px;
 `
 const Container=styled.div`
+padding:0 18px;
 border-radius: 5px;
 background: #030b17;
-
 
 `
 const Containerss = styled(Container)`
@@ -141,6 +143,8 @@ const Containerss = styled(Container)`
 
 const Wrap = styled.div`
 cursor: pointer;
+padding:0 20px;
+
     height:60vh;
     
     img {
