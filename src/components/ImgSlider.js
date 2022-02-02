@@ -9,7 +9,7 @@ let settings ={
     infinite: true,
     speed: 1000,
     slidesToScroll:1,
-    autoplay:false
+    autoplay:true
 };
 
     return (
@@ -20,7 +20,7 @@ let settings ={
         <Containerss>    
             <Wraps>
                 <img src="https://shifu.hotstarext.com/SOURCE/VOD/cd-2021-10-22/deskspops-17cce89e-9600-4df7-9a8a-08a4c7f5fd35.jpg" alt=""/>
-                <Title>
+                <Title>  
                     <LogoTitle>
                    <img src="https://brand-img1.hotstarext.com/image/upload/v1585728139/Disnet%20Plus%20Hotstar%20Logo/D_Hotstar_logo_Dark_BG_120x120.png" alt=""/>
                          <span>Endless Entertainmen...<br/>Entertainment ka Sixer</span>
